@@ -1,16 +1,31 @@
 import React from "react";
-import H3 from "./H3";
+import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
+import MainLayout from "./MainLayout";
+import ProjectLayout from "./ProjectLayout";
+import AllProjects from "./AllProjects";
+import WebDesign from "./WebDesign";
+import AppDesign from "./AppDesign";
+import KidsLearning from "./KidsLearning";
 
 function App() {
   return (
-    <div className="bg-black h-screen ">
-      <H3>WELCOME TO MY WORLD</H3>
-      <h1 className="text-4xl text-bold text-white">
-        Hi, I’m Anamika
-        <span className="text-pink-500">Web Designer.</span>
-        <span className="text-red-200">based in INDIA.</span>
-      </h1>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="home" element={<MainLayout></MainLayout>}></Route>
+        <Route path="projects" element={<ProjectLayout></ProjectLayout>}>
+          <Route
+            path="allprojects"
+            element={<AllProjects></AllProjects>}
+          ></Route>
+          <Route path="webdesign" element={<WebDesign></WebDesign>}></Route>
+          <Route path="appdesign" element={<AppDesign></AppDesign>}></Route>
+          <Route
+            path="kidslearning"
+            element={<KidsLearning></KidsLearning>}
+          ></Route>
+        </Route>
+      </Routes>
+    </BrowserRouter>
   );
 }
 

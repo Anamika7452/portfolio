@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const Projects = (props) => {
   return (
     <div className="px-4 py-5 border border-white flex items-start space-x-4 justify-center rounded-full ">
-      <Link to="/home">
+      <Link to="/">
         <div className=" hover:bg-pink-500 sm:p-2 rounded-md">
           <H3>Home Page</H3>
         </div>

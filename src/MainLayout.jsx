@@ -22,7 +22,7 @@ function MainLayout() {
               <span className=" mt-4 text-red-500">Web Designer.</span>
               <span className="mt-4 mb-10 text-gray-900">based in INDIA.</span>
             </h1>
-            <Link to="/projects">
+            <Link to="/projects/allprojects">
               <div className=" hover:bg-pink-500 px-10 py-5 border border-white flex items-start space-x-10 justify-center rounded-full ">
                 <H3>My Projects</H3>
               </div>
